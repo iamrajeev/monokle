@@ -4,7 +4,6 @@ require('dotenv').config();
 const fs = require('fs');
 const path = require('path');
 var electron_notarize = require('electron-notarize');
-var package = require('./package.json');
 
 module.exports = async function (params) {
   // Only notarize the app if building for macOS and the NOTARIZE environment
@@ -12,8 +11,9 @@ module.exports = async function (params) {
   if (!process.env.NOTARIZE || process.platform !== 'darwin') {
     return;
   }
-
   console.log('afterSign hook triggered', params);
+
+  const package = require(path.join(process.cwd(), './package.json'));
 
   // This should match the appId from electron-builder. It reads from
   // package.json so you won't have to maintain two separate configurations.
