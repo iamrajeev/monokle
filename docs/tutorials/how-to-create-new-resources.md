@@ -39,7 +39,7 @@ In the file explorer, you can view manifests, including their resources, and the
 
 ![Image](img/newimage-5.png)
 
-**Step 8:** Click on the dropdown to select an existing resource as a template.
+**Step 8:** Select an existing resource as a template from the dropdown menu.
 
 ![Image](img/newimage-6.png)
 
